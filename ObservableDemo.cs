@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Otus.Collections
 {
-    internal class ObservableDemo
+    public class ObservableDemo
     {
         public static void Show()
         {
@@ -29,6 +29,7 @@ namespace Otus.Collections
 
             col.Add("e");
             col.Add("f");
+            col.Add("F");
             col.RemoveAt(1);
             col.Remove("d");
             col[2] = "AAAAA";

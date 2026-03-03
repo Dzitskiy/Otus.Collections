@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Otus.Collections
 {
-    internal class ConcurrentDemo
+    public class ConcurrentDemo
     {
         public static async Task Show()
         {
@@ -50,12 +50,14 @@ namespace Otus.Collections
 
             ConcurrentBag<int> numbersBag = new();
 
-            //var locObj = new object();
+            var locObj = new object();
 
             Parallel.For(0, 1000, i =>
             {
                 //lock (locObj)
-                numbersBag.Add(i);
+                //{
+                    numbersBag.Add(i);
+                //}
             });
 
             Console.WriteLine(numbersBag.Count);
@@ -113,7 +115,7 @@ namespace Otus.Collections
             //Ожидаем завершения задач
             Console.WriteLine("Waiting");
 
-            Console.ReadKey();
+            //Console.ReadKey();
         }
 
         private static void Queue()

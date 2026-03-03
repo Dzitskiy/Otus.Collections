@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Otus.Collections
 {
-    internal class ImmutableDemo
+    public class ImmutableDemo
     {
         public static void Show()
         {
@@ -29,10 +29,11 @@ namespace Otus.Collections
         {
             
             var l1 = (ImmutableList<int>)l;
-            var newList = l1.Add(10);
-                     
 
-            Console.WriteLine(Formatted(newList));
+            var t = l1.First();
+            t = 5;
+
+            Console.WriteLine(Formatted(l1));
         }
 
 
@@ -44,7 +45,8 @@ namespace Otus.Collections
             var newCollection = new List<int>() { };
             foreach (var el in l)
             {
-                newCollection.Add(el);
+                var temp = newCollection[1];
+                temp = 5;
             }
             // SendToAirport(l)
         }

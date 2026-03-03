@@ -1,7 +1,11 @@
 ﻿using Otus.Collections;
 
-//ObservableDemo.Show();
+ObserverDemo.Show();
+
+ObservableDemo.Show();
 
 ConcurrentDemo.Show();
 
-//ImmutableDemo.Show();
+ImmutableDemo.Show();
+
+Console.ReadLine();
